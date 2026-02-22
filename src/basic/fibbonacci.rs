@@ -11,12 +11,11 @@ fn fibbo(n: usize) -> usize {
         0 => 0,
         1 => 1,
         _ => {
-            let mut second_to_last_item: usize = 1;
-            let mut last_item: usize = 2;
-            for _ in 3..n {
-                (second_to_last_item, last_item) = (last_item, last_item + second_to_last_item)
+            let mut last_two: (usize, usize) = (0, 1);
+            for _ in 2..n {
+                last_two = (last_two.1, last_two.0 + last_two.1);
             }
-            last_item
+            last_two.1
         }
     }
 }
@@ -29,5 +28,5 @@ fn fibbo(n: usize) -> usize {
 //     }
 // }
 pub fn calculate_fibo_nth(n: usize) {
-    println!("{}", fibbo_nth_iterative(n));
+    println!("{}", fibbo(n));
 }

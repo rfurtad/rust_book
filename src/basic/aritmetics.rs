@@ -1,4 +1,4 @@
-pub fn convert_farenheit_to_celsions() {
+pub fn convert_farenheit_to_celsius() {
     let mut input = String::new();
     println!("Digite o valor da temperatura: ");
     std::io::stdin()
