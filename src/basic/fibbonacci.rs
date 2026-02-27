@@ -6,7 +6,7 @@
 //     }
 // }
 
-fn fibbo(n: usize) -> usize {
+fn fib(n: usize) -> usize {
     match n {
         0 => 0,
         1 => 1,
@@ -28,5 +28,5 @@ fn fibbo(n: usize) -> usize {
 //     }
 // }
 pub fn calculate_fibo_nth(n: usize) {
-    println!("{}", fibbo(n));
+    println!("{}", fib(n));
 }
